@@ -3,9 +3,10 @@ import axios from "axios";
 import "./App.css";
 import Search from "./components/Search";
 import CardGrid from "./components/CardGrid";
+import ImageGrid from "./components/ImageGrid";
 
 const url = "https://www.reddit.com/r/";
-const corsproxy = "https://cors-anywhere.herokuapp.com/";
+// const corsproxy = "https://cors-anywhere.herokuapp.com/";
 
 function App() {
   const [reddit, setReddit] = useState({
@@ -17,9 +18,7 @@ function App() {
   });
 
   async function searchSubreddit(subreddit) {
-    const response = await axios.get(
-      `${corsproxy}${url}${subreddit}.json?raw_json=1`
-    );
+    const response = await axios.get(`${url}${subreddit}.json?raw_json=1`);
     setReddit({
       ...reddit,
       currentSubreddit: subreddit,
@@ -40,11 +39,7 @@ function App() {
         reddit.after
       }&raw_json=1`
     );
-    console.log(
-      `${url}${reddit.currentSubreddit}.json?count=${reddit.page * 25}&after=${
-        reddit.after
-      }&raw_json=1`
-    );
+
     setReddit({
       ...reddit,
       files: response.data.data.children,
@@ -52,6 +47,7 @@ function App() {
       before: response.data.data.before,
       page: reddit.page + 1,
     });
+    window.scrollTo(0, 0);
   }
 
   async function prevPage() {
@@ -70,15 +66,30 @@ function App() {
     if (reddit.page > 1) {
       setReddit({ ...reddit, page: reddit.page - 1 });
     }
+    window.scrollTo(0, 0);
   }
+  let homepage =
+    reddit.currentSubreddit === "" ? (
+      <CardGrid />
+    ) : (
+      <ImageGrid files={reddit.files} />
+    );
+  const resetSubreddit = () => {
+    setReddit({
+      ...reddit,
+      currentSubreddit: "",
+    });
+  };
 
   return (
     <div className="App">
       <Search onSubmit={searchSubreddit} />
-      <h1>There are {reddit.files.length} no of posts.</h1>
+      <button onClick={resetSubreddit}>RESET</button>
+      {/* <CardGrid /> */}
+      {/* <ImageGrid files={reddit.files} /> */}
+      {homepage}
       <button onClick={prevPage}>Prev</button>
       <button onClick={nextPage}>Next</button>
-      <CardGrid />
     </div>
   );
 }

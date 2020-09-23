@@ -11,19 +11,17 @@ function Search(props) {
 
   return (
     <div className="search-container">
-      <form onSubmit={onSearchSubmit}>
-        <div className="search-box">
-          <span>
-            <i className="fas fa-search"></i>
-          </span>
-          <input
-            type="text"
-            className="search-input"
-            value={searchtext}
-            onChange={(e) => setSearchText(e.target.value)}
-          />
-          <input type="submit" />
-        </div>
+      <form className="search-box" onSubmit={onSearchSubmit}>
+        <span>r/</span>
+        <input
+          type="text"
+          className="search-input"
+          value={searchtext}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <button type="submit" id="submit">
+          <i className="fas fa-search"></i>
+        </button>
       </form>
     </div>
   );
