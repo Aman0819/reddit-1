@@ -84,7 +84,9 @@ function App() {
   return (
     <div className="App">
       <Search onSubmit={searchSubreddit} />
-      <button onClick={resetSubreddit}>RESET</button>
+      <button onClick={resetSubreddit}>
+        <h1>RESET</h1>
+      </button>
       {/* <CardGrid /> */}
       {/* <ImageGrid files={reddit.files} /> */}
       {homepage}

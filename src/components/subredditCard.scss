@@ -45,7 +45,7 @@ $color: (primary: #202C39,
   fourth: #B75D69,
   fourth-light: lighten(#B75D69, 20%),
   fourth-dark: darken(#B75D69, 20%),
-  reddit: #9E0031);
+  reddit: #FF5700);
 
 // Colors function
 @function colors($color-name) {
@@ -62,14 +62,18 @@ $color: (primary: #202C39,
   @media (min-width: #{$tablet}) {
     @content
   }
-};
+}
+
+;
 
 // For desktop
 @mixin desktop {
   @media (min-width: #{$desktop}) {
     @content
   }
-};
+}
+
+;
 
 .card-container {
   display: grid;

@@ -11,7 +11,7 @@ function Search(props) {
 
   return (
     <div className="search-container">
-      <form className="search-box" onSubmit={onSearchSubmit}>
+      <form onSubmit={onSearchSubmit} className="search-box">
         <span>r/</span>
         <input
           type="text"
@@ -19,7 +19,7 @@ function Search(props) {
           value={searchtext}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button type="submit" id="submit">
+        <button type="submit" className="submit-btn">
           <i className="fas fa-search"></i>
         </button>
       </form>

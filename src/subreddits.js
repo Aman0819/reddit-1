@@ -18,15 +18,15 @@ const subreddits = [
     rank: "2",
   },
   {
-    name: "Art",
+    name: "wallpapers",
     url:
-      "https://preview.redd.it/ofseh115soo51.png?width=640&crop=smart&auto=webp&s=bac0845c243a26297ce1cea032cf5818c5c246f3",
-    alt: "r/Art",
-    subcount: "18m",
-    description:
-      "This is a subreddit about art. We do not support the reddit redesign. It is horrible and the admins have ignored our...",
+      "https://preview.redd.it/5hcfanu81io51.jpg?width=640&crop=smart&auto=webp&s=87b61a9a2121365c58ccc3ccd5c421b0cd9dd790",
+    alt: "r/wallpapers",
+    subcount: "592k",
+    description: "Work-safe wallpapers from all over!",
     rank: "3",
   },
+
   {
     name: "itookapicture",
     url:
@@ -38,39 +38,43 @@ const subreddits = [
     rank: "4",
   },
   {
-    name: "unixporn",
-    url: "http://unsplash.it/300/600?random",
-    alt: "lmao",
-    subcount: "69k",
+    name: "EarthPorn",
+    url:
+      "https://preview.redd.it/0erdcegw6oo51.jpg?width=640&crop=smart&auto=webp&s=1cd20fa7571446b34038844c58927aeffb88dae4",
+    alt: "r/Earthporn",
+    subcount: "21m",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, illo molestiae maiores debitis culpa aspernatur eos.",
+      "EarthPorn is your community of landscape photographers and those who appreciate the natural beauty of our home planet.",
     rank: "5",
   },
   {
-    name: "unixporn",
-    url: "http://unsplash.it/300/600?random",
-    alt: "lmao",
-    subcount: "69k",
+    name: "Art",
+    url:
+      "https://preview.redd.it/ofseh115soo51.png?width=640&crop=smart&auto=webp&s=bac0845c243a26297ce1cea032cf5818c5c246f3",
+    alt: "r/Art",
+    subcount: "18m",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, illo molestiae maiores debitis culpa aspernatur eos.",
+      "This is a subreddit about art. We do not support the reddit redesign. It is horrible and the admins have ignored our...",
     rank: "6",
   },
+
   {
-    name: "unixporn",
-    url: "http://unsplash.it/300/600?random",
-    alt: "lmao",
-    subcount: "69k",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, illo molestiae maiores debitis culpa aspernatur eos.",
+    name: "RoomPorn",
+    url:
+      "https://preview.redd.it/219fb5q76do51.jpg?width=640&crop=smart&auto=webp&s=646987039a12a29fd967b8cffd94a7fc5bcc5b46",
+    alt: "r/RoomPorn",
+    subcount: "1m",
+    description: "High quality images of aesthetically pleasing rooms.",
     rank: "7",
   },
   {
-    name: "unixporn",
-    url: "http://unsplash.it/300/600?random",
-    alt: "lmao",
-    subcount: "69k",
+    name: "FoodPorn",
+    url:
+      "https://preview.redd.it/6ianqc5tmlo51.jpg?width=640&crop=smart&auto=webp&s=308f141efa8bba3c3e8e2a5749846380236165fb",
+    alt: "r/foodporn",
+    subcount: "3m",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, illo molestiae maiores debitis culpa aspernatur eos.",
+      "Simple, attractive, and visual. Nothing suggestive or inappropriate, this is a safe for work subreddit.",
     rank: "8",
   },
 ];
