@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/*
+  ==========
+    Mixins
+  ==========
+*/
+:root {
+  font-size: 12px;
+  font-family: "Nunito";
+}
+
+@media (min-width: 600px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    font-size: 14px;
+  }
+}
